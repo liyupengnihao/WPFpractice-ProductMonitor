@@ -16,7 +16,8 @@
             <RadialGradientBrush>
                 <!--RadialGradientBrush由里向外渐变-->
                 <!--LinearGradientBrush由左上到右下-->
-                <GradientStop Color="#ff285173" Offset="0"/><!--离中心的距离-->
+                <GradientStop Color="#ff285173" Offset="0"/>
+                <!--离中心的距离-->
                 <GradientStop Color="#ff244967" Offset="0.5"/>
                 <GradientStop Color="#ff14273a" Offset="1"/>
             </RadialGradientBrush>
@@ -36,12 +37,38 @@
                     <ColumnDefinition Width="auto"/>
                     <ColumnDefinition />
                 </Grid.ColumnDefinitions>
+                <!--第一列-->
                 <Image Grid.Column="0" Source="/Resource/Images/logo.png" Margin="10,7"></Image>
+                <!--第二列-->
                 <StackPanel Grid.Column="1" Orientation="Vertical" VerticalAlignment="Center">
                     <TextBlock Text="生产监控平台" FontSize="20" Foreground="White" Margin="10,0,0,0"/>
                     <TextBlock Text="啦啦啦啦啦" FontSize="15" Foreground="White" Margin="10,0,0,0"/>
                 </StackPanel>
+                <!--三列-->
+                <Grid Grid.Column="2">
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition Height="15"/>
+                    </Grid.RowDefinitions>
+                    <!--第一行-->
+                    <StackPanel Grid.Row="0" Orientation="Horizontal" HorizontalAlignment="Right" Background="Transparent" WindowChrome.IsHitTestVisibleInChrome="true" >
+                        <Button Content="&#xe624;" Style="{StaticResource OperateBtnStyle}"></Button>
+                        <Button Content="&#xe651;" Style="{StaticResource OperateBtnStyle}"></Button>
+                        <Button Content="&#xe621;" Style="{StaticResource OperateBtnStyle}" Background="DarkRed"></Button>
+                    </StackPanel>
+                    <!--第二行-->
+                    <Border Grid.Row="1" BorderThickness="0,1,0,0" BorderBrush="#5518aabd">
+                        <Border.Background>
+                            <VisualBrush TileMode="FlipX" Viewport="0,0,7,7" ViewportUnits="Absolute">
+                                <VisualBrush.Visual>
+                                    <Line X1="5" Y1="50" X2="10" Y2="5" Stroke="gray" StrokeThickness="1"></Line>
+                                </VisualBrush.Visual>
+                            </VisualBrush>
+                        </Border.Background>
+                    </Border>
+                </Grid>
             </Grid>
+
         </Border>
     </Grid>
 </Window>

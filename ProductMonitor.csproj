@@ -18,7 +18,6 @@
     <Folder Include="Views\" />
     <Folder Include="ViewModels\" />
     <Folder Include="UserControl\" />
-    <Folder Include="Dictionary\" />
   </ItemGroup>
 
   <ItemGroup>
