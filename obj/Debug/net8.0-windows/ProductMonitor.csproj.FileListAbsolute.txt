@@ -21,3 +21,5 @@ D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-window
 D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\ProductMonitor.sourcelink.json
 D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\Dictionary\OPerateBtnStyleDic.baml
 D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\App.baml
+D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\UserControls\MointorUC.g.cs
+D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\UserControls\MointorUC.baml

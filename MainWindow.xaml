@@ -25,12 +25,13 @@
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
             <!--头部-->
-            <RowDefinition Height="auto"/>
+            <RowDefinition Height="1*"/>
             <!--内容-->
             <RowDefinition Height="25"/>
             <!--底部-->
         </Grid.RowDefinitions>
-        <Border BorderThickness="0,0,0,1" BorderBrush="#5518aabd">
+        <!--头部-->
+        <Border Grid.Row="0" BorderThickness="0,0,0,1" BorderBrush="#5518aabd">
             <Grid>
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="60"/>
@@ -69,6 +70,31 @@
                 </Grid>
             </Grid>
 
+        </Border>
+        <!--内容，定义为用户控件-->
+        <ContentControl Grid.Row="1" Content="{Binding MonitorUC}"></ContentControl>
+        <!--底部-->
+        <Border BorderThickness="0,1,0,0" BorderBrush="#5518aabd" Grid.Row="2">
+            <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <!--第一列-->
+                <Border BorderThickness="0,1,0,0" BorderBrush="#5518aabd">
+                    <Border.Background>
+                        <VisualBrush TileMode="FlipX" Viewport="0,0,7,7" ViewportUnits="Absolute">
+                            <VisualBrush.Visual>
+                                <Line X1="5" Y1="50" X2="10" Y2="5" Stroke="gray" StrokeThickness="1"></Line>
+                            </VisualBrush.Visual>
+                        </VisualBrush>
+                    </Border.Background>
+                </Border>
+                <!--第二列-->
+                <TextBlock Grid.Column="1" Text="PracticeWPFProject" Foreground="White" FontSize="20">
+                    
+                </TextBlock>
+            </Grid>
         </Border>
     </Grid>
 </Window>
