@@ -17,12 +17,49 @@
                 <ColumnDefinition Width="200"></ColumnDefinition>
                 <ColumnDefinition Width="*"></ColumnDefinition>
             </Grid.ColumnDefinitions>
+            <!--第一行第一列-->
             <StackPanel Grid.Column="0" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
-                <TextBlock Text="17:34" Foreground="White" FontSize="30" VerticalAlignment="Center" FontFamily="../Resource/Fonts/#iconfont"></TextBlock>
+                <TextBlock Text="{Binding TimerStr}" Foreground="White" FontSize="30" VerticalAlignment="Center" FontFamily="../Resource/Fonts/#iconfont"></TextBlock>
                 <StackPanel>
-                    <TextBlock Text="2023-02-01" Foreground="White" FontSize="10" Margin="1,1,1,1"></TextBlock>
-                    <TextBlock Text="星期六" Foreground="White" FontSize="10" Margin="1,1,1,1"></TextBlock>
+                    <TextBlock Text="{Binding DateStr}" Foreground="White" FontSize="10" Margin="1,1,1,1"></TextBlock>
+                    <TextBlock Text="{Binding WeekStr}" Foreground="White" FontSize="10" Margin="1,1,1,1" HorizontalAlignment="Right"></TextBlock>
                 </StackPanel>
+            </StackPanel>
+            <!--第一行第二列-->
+            <StackPanel Grid.Column="1" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left">
+                <StackPanel.Resources>
+                    <DataTemplate x:Key="machineCount">
+                        <Border Width="15" Background="#3318aabd" Margin="2,0">
+                            <TextBlock Text="{Binding}" VerticalAlignment="Center" HorizontalAlignment="Center" Foreground="White" FontSize="16"></TextBlock>
+                        </Border>
+                    </DataTemplate>
+                </StackPanel.Resources>
+                <TextBlock Text="机台&#13;总数" Foreground="#99ffff" FontSize="10" VerticalAlignment="Center" Margin="5,0"></TextBlock>
+                <ItemsControl ItemsSource="{Binding MachineCount}" ItemTemplate="{StaticResource machineCount}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"></StackPanel>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+
+                <TextBlock Text="生产&#13;计数" Foreground="#99ffff" FontSize="10" VerticalAlignment="Center" Margin="10,0"></TextBlock>
+                <ItemsControl ItemsSource="{Binding ProductCount}" ItemTemplate="{StaticResource machineCount}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"></StackPanel>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
+
+                <TextBlock Text="不良&#13;计数" Foreground="#99ffff" FontSize="10" VerticalAlignment="Center" Margin="10,0"></TextBlock>
+                <ItemsControl ItemsSource="{Binding BadCount}" ItemTemplate="{StaticResource machineCount}">
+                    <ItemsControl.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"></StackPanel>
+                        </ItemsPanelTemplate>
+                    </ItemsControl.ItemsPanel>
+                </ItemsControl>
             </StackPanel>
         </Grid>
     </Grid>
