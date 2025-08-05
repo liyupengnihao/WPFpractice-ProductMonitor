@@ -1,0 +1,32 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style TargetType="Button" x:Key="BtnStyle">
+        <!--调用时使用的名称BtnStyle-->
+        <Setter Property="Foreground" Value="#aaa"></Setter>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Border BorderThickness="1" Background="Transparent" Name="border">
+                        <!--渐变色-->
+                        <Border.BorderBrush>
+                            <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                <GradientStop Color="#22ffffff" Offset="0.0"/>
+                                <GradientStop Color="#77ffffff" Offset="0.5"/>
+                                <GradientStop Color="#22ffffff" Offset="1"/>
+                            </LinearGradientBrush><!--此原点为左上角-->
+                        </Border.BorderBrush>
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <TextBlock Text="{TemplateBinding Tag}" FontFamily="../Resource/Fonts/#iconfont" Margin="0,3,5,0"></TextBlock><!--Tag来显示图标-->
+                            <TextBlock Text="{TemplateBinding Content}" VerticalAlignment="Center" HorizontalAlignment="Center"></TextBlock>
+                        </StackPanel>
+                    </Border>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsMouseOver" Value="true">
+                            <Setter TargetName="border" Property="Background" Value="#11ffffff"></Setter>
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
