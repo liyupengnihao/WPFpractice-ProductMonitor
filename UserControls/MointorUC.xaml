@@ -6,6 +6,46 @@
              xmlns:local="clr-namespace:ProductMonitor.UserControls"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Height="675" Width="1200">
+    <UserControl.Resources><!--再此类的资源-->
+        <Style TargetType="GroupBox">
+            <Setter Property="Margin" Value="10,3">
+                
+            </Setter>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="GroupBox">
+                        <Grid>
+                            <!--左上角线条-->
+                            <Polyline Points="0 30 0 10 10 0 30 0" Stroke="#9918aabd" StrokeThickness="1" VerticalAlignment="Top" HorizontalAlignment="Left"></Polyline>
+                            <!--两圆点-->
+                            <Ellipse Width="3" Height="4" HorizontalAlignment="Left" VerticalAlignment="Top" Fill="#9918aabd" Margin="24,-2,0,0"></Ellipse>
+                            <Ellipse Width="3" Height="4" HorizontalAlignment="Left" VerticalAlignment="Top" Fill="#9918aabd" Margin="-2,24,0,0"></Ellipse>
+                            <!--右线条路径-->
+                            <Path Data="M0 0,3 3,30 3,33 0,63 0,83 20,83 40M5 0,28 0" HorizontalAlignment="Right" Stroke="#9918aabd" StrokeThickness="1"></Path>
+                            <!--M代表移动-->
+                            <!--左下角的线-->
+                            <Polyline Points="0 0,0 15,10 25,25 25" Stroke="#9918aabd" StrokeThickness="1" VerticalAlignment="Bottom" HorizontalAlignment="Left"></Polyline>
+                            <!--右下角线-->
+                            <Polyline Points="10 0,0 10" Stroke="#9918aabd" StrokeThickness="1" VerticalAlignment="Bottom" HorizontalAlignment="Right"></Polyline>
+                            <!--右下角多边形-->
+                            <Polygon Points="0 7,7 7,7 0" Fill="#9918aabd" HorizontalAlignment="Right" VerticalAlignment="Bottom"></Polygon>
+                            <!--上面的线,来四个-->
+                            <Border BorderThickness="0,1,0,0"  BorderBrush="#9918aabd" Margin="20,-0.5,83,0"></Border>
+                            <Border BorderThickness="1,0,0,0"  BorderBrush="#9918aabd" Margin="-0.5,20,0,20"></Border>
+                            <Border BorderThickness="0,0,1,0"  BorderBrush="#9918aabd" Margin="-1,20,0,10"></Border>
+                            <Border BorderThickness="0,0,0,1"  BorderBrush="#9918aabd" Margin="25,0,10,0"></Border>
+                            <!--文字修饰-->
+                            <Path Data="M0 0,3 0,5 4,3 8,0 8,3 4" Fill="#9918aabd" Margin="10,13"></Path>
+                            <Path Data="M0 0,3 0,5 4,3 8,0 8,3 4" Fill="#5518aabd" Margin="16,13"></Path>
+                            <TextBlock Text="{TemplateBinding Header}" Foreground="White" FontWeight="Bold" Margin="25,8" HorizontalAlignment="Left" VerticalAlignment="Top"></TextBlock>
+                            <!--显示内容-->
+                            <ContentPresenter></ContentPresenter>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"></RowDefinition>
