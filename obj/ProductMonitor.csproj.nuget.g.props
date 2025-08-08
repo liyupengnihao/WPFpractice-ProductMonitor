@@ -13,4 +13,7 @@
     <SourceRoot Include="C:\Users\liyupeng\.nuget\packages\" />
     <SourceRoot Include="D:\VS共存\NuGetPackages\" />
   </ItemGroup>
+  <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
+    <PkgLiveCharts_Wpf Condition=" '$(PkgLiveCharts_Wpf)' == '' ">C:\Users\liyupeng\.nuget\packages\livecharts.wpf\0.9.7</PkgLiveCharts_Wpf>
+  </PropertyGroup>
 </Project>

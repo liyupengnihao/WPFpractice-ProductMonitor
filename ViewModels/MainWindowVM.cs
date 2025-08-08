@@ -1,17 +1,36 @@
-﻿using System;
+﻿using ProductMonitor.Models;
+using ProductMonitor.UserControls;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Controls;
-using ProductMonitor.UserControls;
 
 namespace ProductMonitor.ViewModels
 {
     public class MainWindowVM : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler? PropertyChanged;
+
+        public MainWindowVM()
+        {
+            #region 初始化环境数据
+            if(_EnviromentList==null)
+            {
+                _EnviromentList=new List<EnviromentModel>();
+            }
+            _EnviromentList.Add(new EnviromentModel{EnItemName="光照（Lux）",EnItemValue=123 });
+            _EnviromentList.Add(new EnviromentModel{EnItemName="噪音（db）",EnItemValue=55 });
+            _EnviromentList.Add(new EnviromentModel{EnItemName="温度（℃）",EnItemValue=80 });
+            _EnviromentList.Add(new EnviromentModel{EnItemName="湿度（%）",EnItemValue=43 });
+            _EnviromentList.Add(new EnviromentModel{EnItemName="PM2.5（m³）",EnItemValue=20 });
+            _EnviromentList.Add(new EnviromentModel{EnItemName="硫化氢（ppm）",EnItemValue=15 });
+            _EnviromentList.Add(new EnviromentModel{EnItemName="氮气（ppm）",EnItemValue=18 });
+            #endregion
+        }
+
         public static object ReadOnly = new object();
         /// <summary>
         /// 监控用户控件
@@ -48,6 +67,7 @@ namespace ProductMonitor.ViewModels
                 }
             }
         }
+        #region 时间 日期
         #region 后端不用通知
         /// <summary>
         /// 时间，小时：分钟
@@ -77,6 +97,7 @@ namespace ProductMonitor.ViewModels
         //    }
         //}
         #endregion
+
         /// <summary>
         /// 日期
         /// </summary>
@@ -107,10 +128,13 @@ namespace ProductMonitor.ViewModels
                 //}
             }
         }
+        #endregion
+
+        #region 计数
         /// <summary>
         /// 机台总数
         /// </summary>
-        private string _MachineCount="0298";
+        private string _MachineCount = "0298";
 
         public string MachineCount
         {
@@ -118,7 +142,7 @@ namespace ProductMonitor.ViewModels
             set
             {
                 _MachineCount = value;
-                if(PropertyChanged!=null)
+                if (PropertyChanged!=null)
                 {
                     PropertyChanged(this, new PropertyChangedEventArgs("MachineCount"));
                 }
@@ -158,6 +182,27 @@ namespace ProductMonitor.ViewModels
                 }
             }
         }
+        #endregion
 
+        #region 环境监控数据
+        private List<EnviromentModel> _EnviromentList;
+
+        public List<EnviromentModel> EnviromentList
+        {
+            get
+            {
+                return _EnviromentList;
+            }
+            set
+            {
+                _EnviromentList = value;
+                if (PropertyChanged!=null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("EnviromentList"));
+                }
+            }
+        }
+
+        #endregion
     }
 }

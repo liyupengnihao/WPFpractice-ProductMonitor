@@ -4,8 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProductMonitor.UserControls"
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800" Height="675" Width="1200">
+    <!--lvc放容器控件内不会出错-->
     <UserControl.Resources><!--再此类的资源-->
         <Style TargetType="GroupBox">
             <Setter Property="Margin" Value="10,3">
@@ -115,8 +117,66 @@
                 <ColumnDefinition></ColumnDefinition>
             </Grid.ColumnDefinitions>
             <UniformGrid Grid.Column="0" Columns="1">
-                <GroupBox Header="环境" Foreground="White"></GroupBox>
-                <GroupBox Header="产能" Foreground="White"></GroupBox>
+                <GroupBox Header="环境" Foreground="White">
+                    <!--遍历所有实体-->
+                    <ItemsControl ItemsSource="{Binding EnviromentList}" VerticalAlignment="Center">
+                        <ItemsControl.ItemsPanel>
+                            <ItemsPanelTemplate>
+                                <UniformGrid>
+                                    <UniformGrid.Columns>
+                                        4
+                                    </UniformGrid.Columns>
+                                </UniformGrid>
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate><!--用的多-->
+                                <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5">
+                                    <TextBlock Text="{Binding EnItemValue}" FontSize="16" Foreground="#ff2bedf1" Margin="0,5"></TextBlock>
+                                    <TextBlock Text="{Binding EnItemName}" FontSize="10" Foreground="white"></TextBlock>
+                                </StackPanel>
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </GroupBox>
+                <GroupBox Header="产能" Foreground="White">
+                    <Grid>
+                        <!--定义x轴数据-->
+                        <lvc:CartesianChart Margin="20,35,20,5">
+                            <lvc:CartesianChart.AxisX>
+                                <lvc:Axis Labels="8:00,9:00,10:00,11:00,12:00,13:00,14:00,15:00,16:00" Foreground="White" FontSize="10">
+                                    <lvc:Axis.Separator>
+                                        <lvc:Separator Step="1" StrokeThickness="2"></lvc:Separator>
+                                    </lvc:Axis.Separator>
+                                </lvc:Axis>
+                            </lvc:CartesianChart.AxisX>
+                            <!--定义Y轴数据-->
+                            <lvc:CartesianChart.Series>
+                                <lvc:ColumnSeries Values="300,400,500,380,200,600,350,550,610" Title="生产计数" MaxColumnWidth="10">
+                                   <!--渐变色-->
+                                    <lvc:ColumnSeries.Fill>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                            <GradientStop Color="#ff3fbbe6" Offset="0.0" />
+                                            <GradientStop Color="#ff2bedf1" Offset="1.0" />
+                                        </LinearGradientBrush>
+                                    </lvc:ColumnSeries.Fill>
+                                </lvc:ColumnSeries>
+
+                                <lvc:ColumnSeries Values="100,0,80,100,0,0,150,100,0" Title="不良计数" MaxColumnWidth="10">
+                                    <!--渐变色-->
+                                    <lvc:ColumnSeries.Fill>
+                                        <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                                            <GradientStop Color="#fffb9a9a" Offset="0.0" />
+                                            <GradientStop Color="#ffff5151" Offset="1.0" />
+                                        </LinearGradientBrush>
+                                    </lvc:ColumnSeries.Fill>
+                                </lvc:ColumnSeries>
+
+                            </lvc:CartesianChart.Series>
+                        </lvc:CartesianChart>
+                              
+                    </Grid>
+                </GroupBox>
                 <GroupBox Header="质量" Foreground="White"></GroupBox>
             </UniformGrid>
         </Grid>
