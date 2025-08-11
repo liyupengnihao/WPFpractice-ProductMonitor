@@ -17,21 +17,27 @@ namespace ProductMonitor.ViewModels
         public MainWindowVM()
         {
             #region 初始化环境数据
-            if(_EnviromentList==null)
+            if (_EnviromentList==null)
             {
                 _EnviromentList=new List<EnviromentModel>();
             }
-            _EnviromentList.Add(new EnviromentModel{EnItemName="光照（Lux）",EnItemValue=123 });
-            _EnviromentList.Add(new EnviromentModel{EnItemName="噪音（db）",EnItemValue=55 });
-            _EnviromentList.Add(new EnviromentModel{EnItemName="温度（℃）",EnItemValue=80 });
-            _EnviromentList.Add(new EnviromentModel{EnItemName="湿度（%）",EnItemValue=43 });
-            _EnviromentList.Add(new EnviromentModel{EnItemName="PM2.5（m³）",EnItemValue=20 });
-            _EnviromentList.Add(new EnviromentModel{EnItemName="硫化氢（ppm）",EnItemValue=15 });
-            _EnviromentList.Add(new EnviromentModel{EnItemName="氮气（ppm）",EnItemValue=18 });
+            _EnviromentList.Add(new EnviromentModel { EnItemName="光照（Lux）", EnItemValue=123 });
+            _EnviromentList.Add(new EnviromentModel { EnItemName="噪音（db）", EnItemValue=55 });
+            _EnviromentList.Add(new EnviromentModel { EnItemName="温度（℃）", EnItemValue=80 });
+            _EnviromentList.Add(new EnviromentModel { EnItemName="湿度（%）", EnItemValue=43 });
+            _EnviromentList.Add(new EnviromentModel { EnItemName="PM2.5（m³）", EnItemValue=20 });
+            _EnviromentList.Add(new EnviromentModel { EnItemName="硫化氢（ppm）", EnItemValue=15 });
+            _EnviromentList.Add(new EnviromentModel { EnItemName="氮气（ppm）", EnItemValue=18 });
+            #endregion
+
+            #region 初始化报警数据
+            _AlarmList=new List<AlarmModel>();
+            _AlarmList.Add(new AlarmModel { Num="01",Msg="设备温度过高",Time="2025-08-11",Duration="5" });
+            _AlarmList.Add(new AlarmModel { Num="02",Msg="车间温度过高",Time="2025-08-11",Duration="10" });
             #endregion
         }
 
-        public static object ReadOnly = new object();
+        public static readonly object ReadOnly = new object();
         /// <summary>
         /// 监控用户控件
         /// </summary>
@@ -199,6 +205,35 @@ namespace ProductMonitor.ViewModels
                 if (PropertyChanged!=null)
                 {
                     PropertyChanged(this, new PropertyChangedEventArgs("EnviromentList"));
+                }
+            }
+        }
+
+        #endregion
+
+        #region 报警信息
+        private List<AlarmModel> _AlarmList;
+
+        public List<AlarmModel> AlarmList
+        {
+            get
+            {
+                if (_AlarmList==null)
+                {
+                    lock (ReadOnly)
+                    {
+                        if (_AlarmList==null)
+                            _AlarmList=new List<AlarmModel>();
+                    }
+                }
+                return _AlarmList;
+            }
+            set
+            {
+                _AlarmList = value;
+                if(PropertyChanged!=null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("AlarmList"));
                 }
             }
         }
