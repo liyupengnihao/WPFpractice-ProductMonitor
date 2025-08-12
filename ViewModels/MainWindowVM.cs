@@ -32,8 +32,20 @@ namespace ProductMonitor.ViewModels
 
             #region 初始化报警数据
             _AlarmList=new List<AlarmModel>();
-            _AlarmList.Add(new AlarmModel { Num="01",Msg="设备温度过高",Time="2025-08-11",Duration="5" });
-            _AlarmList.Add(new AlarmModel { Num="02",Msg="车间温度过高",Time="2025-08-11",Duration="10" });
+            _AlarmList.Add(new AlarmModel { Num="01", Msg="设备温度过高", Time="2025-08-11", Duration="5" });
+            _AlarmList.Add(new AlarmModel { Num="02", Msg="车间温度过高", Time="2025-08-11", Duration="10" });
+            #endregion
+
+            #region 设备数据
+            _DeviceList=new List<DeviceModel>();
+            _DeviceList.Add(new DeviceModel { DeviceItem ="电能(Kw.h)", Value =60.8});
+            _DeviceList.Add(new DeviceModel { DeviceItem ="电压(V)", Value=390});
+            _DeviceList.Add(new DeviceModel { DeviceItem ="电流(A)", Value=5});
+            _DeviceList.Add(new DeviceModel { DeviceItem ="压差(kpa)", Value=13});
+            _DeviceList.Add(new DeviceModel { DeviceItem ="温度(℃)", Value=36});
+            _DeviceList.Add(new DeviceModel { DeviceItem ="振动(mm/s)", Value=4.1});
+            _DeviceList.Add(new DeviceModel { DeviceItem ="转速(r/min)", Value=2600});
+            _DeviceList.Add(new DeviceModel { DeviceItem ="气压(kpa)", Value=0.5});
             #endregion
         }
 
@@ -231,9 +243,30 @@ namespace ProductMonitor.ViewModels
             set
             {
                 _AlarmList = value;
-                if(PropertyChanged!=null)
+                if (PropertyChanged!=null)
                 {
                     PropertyChanged(this, new PropertyChangedEventArgs("AlarmList"));
+                }
+            }
+        }
+
+        #endregion
+
+        #region 设备
+        private List<DeviceModel> _DeviceList;
+
+        public List<DeviceModel> DeviceList
+        {
+            get
+            {
+                return _DeviceList;
+            }
+            set
+            {
+                _DeviceList = value;
+                if(PropertyChanged!=null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs("DeviceList"));
                 }
             }
         }
