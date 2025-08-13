@@ -28,3 +28,5 @@ D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\bin\Debug\net8.0-window
 D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\bin\Debug\net8.0-windows\LiveCharts.Wpf.dll
 D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\ProductMonitor.csproj.AssemblyReference.cache
 D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\ProductM.DEAEF65F.Up2Date
+D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\UserControls\ReaderUC.g.cs
+D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\UserControls\ReaderUC.baml

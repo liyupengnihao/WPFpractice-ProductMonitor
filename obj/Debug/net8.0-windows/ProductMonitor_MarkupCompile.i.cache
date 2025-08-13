@@ -10,11 +10,11 @@ none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP;WINDOWS;WINDOWS7_0;NET5_0_OR_GREATER;NET6_0_OR_GREATER;NET7_0_OR_GREATER;NET8_0_OR_GREATER;NETCOREAPP3_0_OR_GREATER;NETCOREAPP3_1_OR_GREATER;WINDOWS7_0_OR_GREATER
 D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\App.xaml
-4-985800421
+5-342144817
 
-11-957257637
+13-660006091
 2001886705925
-Dictionary\BtnStyleDic.xaml;Dictionary\OPerateBtnStyleDic.xaml;MainWindow.xaml;UserControls\MointorUC.xaml;
+Dictionary\BtnStyleDic.xaml;Dictionary\OPerateBtnStyleDic.xaml;MainWindow.xaml;UserControls\MointorUC.xaml;UserControls\ReaderUC.xaml;
 
-True
+False
 

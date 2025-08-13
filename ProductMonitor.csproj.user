@@ -5,5 +5,8 @@
     <Compile Update="UserControls\MointorUC.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControls\ReaderUC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
