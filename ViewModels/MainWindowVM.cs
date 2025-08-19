@@ -36,16 +36,35 @@ namespace ProductMonitor.ViewModels
             _AlarmList.Add(new AlarmModel { Num="02", Msg="车间温度过高", Time="2025-08-11", Duration="10" });
             #endregion
 
-            #region 设备数据
+            #region 初始化设备数据
             _DeviceList=new List<DeviceModel>();
-            _DeviceList.Add(new DeviceModel { DeviceItem ="电能(Kw.h)", Value =60.8});
-            _DeviceList.Add(new DeviceModel { DeviceItem ="电压(V)", Value=390});
-            _DeviceList.Add(new DeviceModel { DeviceItem ="电流(A)", Value=5});
-            _DeviceList.Add(new DeviceModel { DeviceItem ="压差(kpa)", Value=13});
-            _DeviceList.Add(new DeviceModel { DeviceItem ="温度(℃)", Value=36});
-            _DeviceList.Add(new DeviceModel { DeviceItem ="振动(mm/s)", Value=4.1});
-            _DeviceList.Add(new DeviceModel { DeviceItem ="转速(r/min)", Value=2600});
-            _DeviceList.Add(new DeviceModel { DeviceItem ="气压(kpa)", Value=0.5});
+            _DeviceList.Add(new DeviceModel { DeviceItem ="电能(Kw.h)", Value =60.8 });
+            _DeviceList.Add(new DeviceModel { DeviceItem ="电压(V)", Value=390 });
+            _DeviceList.Add(new DeviceModel { DeviceItem ="电流(A)", Value=5 });
+            _DeviceList.Add(new DeviceModel { DeviceItem ="压差(kpa)", Value=13 });
+            _DeviceList.Add(new DeviceModel { DeviceItem ="温度(℃)", Value=36 });
+            _DeviceList.Add(new DeviceModel { DeviceItem ="振动(mm/s)", Value=4.1 });
+            _DeviceList.Add(new DeviceModel { DeviceItem ="转速(r/min)", Value=2600 });
+            _DeviceList.Add(new DeviceModel { DeviceItem ="气压(kpa)", Value=0.5 });
+            #endregion
+
+            #region 初始化雷达数据
+            _RaderList=new List<ReaderModel>();
+            _RaderList.Add(new ReaderModel { ItemName="排烟风机", Value=90 });
+            _RaderList.Add(new ReaderModel { ItemName="客梯", Value=30.00 });
+            _RaderList.Add(new ReaderModel { ItemName="供水机", Value=34.89 });
+            _RaderList.Add(new ReaderModel { ItemName="喷淋水泵", Value=69.59 });
+            _RaderList.Add(new ReaderModel { ItemName="稳压设备", Value=20 });
+            //_RaderList.Add(new RaderModel { ItemName="稳压设备6", Value=20 });
+            #endregion
+
+            #region 初始化人员缺岗信息
+            _StuffOutWorkList=new List<StuffOutWorkModel>();
+            _StuffOutWorkList.Add(new StuffOutWorkModel { StuffName="张张", Position="技术员", OUtWorkCount=123 });
+            _StuffOutWorkList.Add(new StuffOutWorkModel { StuffName="王王", Position="操作员", OUtWorkCount=23 });
+            _StuffOutWorkList.Add(new StuffOutWorkModel { StuffName="李李", Position="技术员", OUtWorkCount=134 });
+            _StuffOutWorkList.Add(new StuffOutWorkModel { StuffName="aaa", Position="统计员", OUtWorkCount=143 });
+            _StuffOutWorkList.Add(new StuffOutWorkModel { StuffName="杨过", Position="统计员", OUtWorkCount=12 });
             #endregion
         }
 
@@ -264,9 +283,41 @@ namespace ProductMonitor.ViewModels
             set
             {
                 _DeviceList = value;
-                if(PropertyChanged!=null)
+                if (PropertyChanged!=null)
                 {
                     PropertyChanged(this, new PropertyChangedEventArgs("DeviceList"));
+                }
+            }
+        }
+
+        #endregion
+
+        #region 雷达数据属性
+        private List<ReaderModel> _RaderList;
+
+        public List<ReaderModel> RaderList
+        {
+            get { return _RaderList; }
+            set { _RaderList = value; }
+        }
+
+        #endregion
+
+        #region 缺岗数据
+        /// <summary>
+        /// 缺岗员工
+        /// </summary>
+        private List<StuffOutWorkModel> _StuffOutWorkList;
+
+        public List<StuffOutWorkModel> StuffOutWorkList
+        {
+            get { return _StuffOutWorkList; }
+            set
+            {
+                _StuffOutWorkList = value;
+                if(PropertyChanged!=null)
+                {
+                    PropertyChanged(this,new PropertyChangedEventArgs("StuffOutWorkList"));
                 }
             }
         }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace ProductMonitor.Models
 {
-    public class RaderModel
+    public class ReaderModel
     {
         public string ItemName { get; set; }
         public double Value { get; set; }

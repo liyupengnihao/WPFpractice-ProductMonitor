@@ -39,22 +39,22 @@ namespace ProductMonitor.UserControls
         /// <summary>
         /// 数据源。支持数据绑定 依赖属性
         /// </summary>
-
-        public List<RaderModel> ItemSource
+        public List<ReaderModel> ItemsSource
         {
-            get { return (List<RaderModel>)GetValue(ItemSourceProperty); }
-            set { SetValue(ItemSourceProperty, value); }
+            get { return (List<ReaderModel>)GetValue(ItemsSourceProperty); }
+            set { SetValue(ItemsSourceProperty, value); }
         }
 
-        // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
-        public static readonly DependencyProperty ItemSourceProperty =
-            DependencyProperty.Register("ItemSource", typeof(int), typeof(List<RaderModel>), new PropertyMetadata(0));
+        // Using a DependencyProperty as the backing store for ItemSource.  This enables animation, styling, binding, etc...
+        public static readonly DependencyProperty ItemsSourceProperty =
+            DependencyProperty.Register("ItemsSource", typeof(List<ReaderModel>), typeof(ReaderUC), new PropertyMetadata(0));
+
         /// <summary>
         /// 画图方法
         /// </summary>
         public void Drag()
         {
-            if (ItemSource!=null||ItemSource.Count==0)
+            if (ItemsSource!=null||ItemsSource.Count==0)
             {
                 return;
             }
@@ -73,13 +73,29 @@ namespace ProductMonitor.UserControls
             double raduis = size/2;
 
             //多边形边跨度
-            double step = 360.0/ItemSource.Count;//一个边对应角度
-            for (int i = 0; i<ItemSource.Count; i++)
+            double step = 360.0/ItemsSource.Count;//一个边对应角度
+            for (int i = 0; i<ItemsSource.Count; i++)
             {
-                P1.Points.Add(new Point(raduis+(raduis-20)*Math.Cos((step*i-90)*Math.PI/180),raduis+(raduis-20)*Math.Sin((step*i-90)*Math.PI/180)));
-                P2.Points.Add(new Point(raduis+(raduis-20)*Math.Cos((step*i-90)*Math.PI/180)*0.75, raduis+(raduis-20)*Math.Sin((step*i-90)*Math.PI/180)*0.75));
-                P3.Points.Add(new Point(raduis+(raduis-20)*Math.Cos((step*i-90)*Math.PI/180)*0.5, raduis+(raduis-20)*Math.Sin((step*i-90)*Math.PI/180)*0.5));
-                P4.Points.Add(new Point(raduis+(raduis-20)*Math.Cos((step*i-90)*Math.PI/180)*0.25, raduis+(raduis-20)*Math.Sin((step*i-90)*Math.PI/180)*0.25));
+                double x = (raduis-20)*Math.Cos((step*i-90)*Math.PI/180);
+                double y= (raduis-20)*Math.Sin((step*i-90)*Math.PI/180);
+                P1.Points.Add(new Point(raduis+x,raduis+y));
+                P2.Points.Add(new Point(raduis+x*0.75, raduis+y*0.75));
+                P3.Points.Add(new Point(raduis+x*0.5, raduis+y*0.5));
+                P4.Points.Add(new Point(raduis+x*0.25, raduis+y*0.25));
+                ///数据多边形
+                P5.Points.Add(new Point(raduis+x*ItemsSource[i].Value*0.01,raduis+y*ItemsSource[i].Value*0.01));
+
+                //文字处理
+                TextBlock txt = new TextBlock();
+                txt.Width=60;
+                txt.FontSize = 10;
+                txt.TextAlignment=TextAlignment.Center;
+                txt.Text=ItemsSource[i].ItemName;
+                txt.Foreground=new SolidColorBrush(Color.FromArgb(100,255, 255, 255));
+                txt.SetValue(Canvas.LeftProperty, raduis+(raduis-10)*Math.Cos((step*i-90)*Math.PI/180)-20);//文字离左边的间距
+                txt.SetValue(Canvas.TopProperty, raduis+(raduis-10)*Math.Sin((step*i-90)*Math.PI/180)-7);//文字离左边的间距
+
+                mainCanvas.Children.Add(txt);
             }
         }
     }
