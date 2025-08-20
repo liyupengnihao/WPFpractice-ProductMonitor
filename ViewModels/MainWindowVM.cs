@@ -66,6 +66,14 @@ namespace ProductMonitor.ViewModels
             _StuffOutWorkList.Add(new StuffOutWorkModel { StuffName="aaa", Position="统计员", OUtWorkCount=143 });
             _StuffOutWorkList.Add(new StuffOutWorkModel { StuffName="杨过", Position="统计员", OUtWorkCount=12 });
             #endregion
+
+            #region 初始化车间列表
+            _WorkShopList=new List<WorkShopModel>();
+            _WorkShopList.Add(new WorkShopModel { WorkShopName="贴片车间", WorkingCount=32, WaitCount=8, WrongCount=4, StopCount=0 });
+            _WorkShopList.Add(new WorkShopModel { WorkShopName="封装车间", WorkingCount=20, WaitCount=8, WrongCount=4, StopCount=0 });
+            _WorkShopList.Add(new WorkShopModel { WorkShopName="焊接车间", WorkingCount=68, WaitCount=8, WrongCount=4, StopCount=0 });
+            _WorkShopList.Add(new WorkShopModel { WorkShopName="贴片车间", WorkingCount=68, WaitCount=8, WrongCount=4, StopCount=0 });
+            #endregion
         }
 
         public static readonly object ReadOnly = new object();
@@ -315,9 +323,30 @@ namespace ProductMonitor.ViewModels
             set
             {
                 _StuffOutWorkList = value;
-                if(PropertyChanged!=null)
+                if (PropertyChanged!=null)
                 {
-                    PropertyChanged(this,new PropertyChangedEventArgs("StuffOutWorkList"));
+                    PropertyChanged(this, new PropertyChangedEventArgs("StuffOutWorkList"));
+                }
+            }
+        }
+
+        #endregion
+
+        #region 车间属性
+        /// <summary>
+        /// 车间
+        /// </summary>
+        private List<WorkShopModel> _WorkShopList;
+
+        public List<WorkShopModel> WorkShopList
+        {
+            get { return _WorkShopList; }
+            set
+            {
+                _WorkShopList = value;
+                if (PropertyChanged!=null)
+                {
+                    PropertyChanged(this, new PropertyChangedEventArgs(nameof(WorkShopList)));
                 }
             }
         }
