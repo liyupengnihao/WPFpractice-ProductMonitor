@@ -7,7 +7,7 @@
              xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              mc:Ignorable="d" 
              xmlns:rader="clr-namespace:ProductMonitor.UserControls"
-             d:DesignHeight="450" d:DesignWidth="800" Height="675" Width="1200">
+             d:DesignHeight="675" d:DesignWidth="1200" Height="675" Width="1200">
     <!--lvc放容器控件内不会出错 折线图与饼状图-->
     <UserControl.Resources>
         <!--再此类的资源-->
@@ -397,7 +397,7 @@
                                 <TextBlock Grid.Column="0" Text="{Binding WorkShopName}" Foreground="#18aabd"></TextBlock>
                                 <!--<TextBlock Grid.Column="2" Text="[详情]" Foreground="White"></TextBlock>-->
                                 <TextBlock Grid.Column="2">
-                                    <Hyperlink Foreground="white" TextDecorations="None">
+                                    <Hyperlink Foreground="white" TextDecorations="None" Command="{Binding ShowDetailCmm,RelativeSource={RelativeSource AncestorType=Window}}">
                                         [详情]
                                     </Hyperlink><!--超链接-->
                                 </TextBlock>

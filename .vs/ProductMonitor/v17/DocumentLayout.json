@@ -3,8 +3,44 @@
   "WorkspaceRootPath": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\usercontrols\\worshopdetailuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:usercontrols\\worshopdetailuc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\usercontrols\\worshopdetailuc.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:usercontrols\\worshopdetailuc.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\dictionary\\btnstyledic.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:dictionary\\btnstyledic.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\usercontrols\\mointoruc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:usercontrols\\mointoruc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\usercontrols\\mointoruc.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:usercontrols\\mointoruc.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\viewmodels\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:viewmodels\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\opcommand\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:opcommand\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\models\\workshopmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -15,20 +51,8 @@
       "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:models\\stuffoutworkmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\viewmodels\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:viewmodels\\mainwindowvm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\usercontrols\\readeruc.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:usercontrols\\readeruc.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\usercontrols\\mointoruc.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:usercontrols\\mointoruc.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\usercontrols\\readeruc.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -51,20 +75,8 @@
       "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:models\\alarmmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:mainwindow.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:assemblyinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:app.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\dictionary\\btnstyledic.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|solutionrelative:dictionary\\btnstyledic.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{AE5FA51E-AC68-4B55-8C5C-93B53FDDE537}|ProductMonitor.csproj|d:\\wpf250717\u5B66\u4E60\\productmonitorpractice\\productmonitor\\dictionary\\operatebtnstyledic.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
@@ -78,11 +90,49 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 13,
+          "SelectedChildIndex": 2,
           "Children": [
             {
               "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "WorShopDetailUC.xaml.cs",
+              "DocumentMoniker": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\UserControls\\WorShopDetailUC.xaml.cs",
+              "RelativeDocumentMoniker": "UserControls\\WorShopDetailUC.xaml.cs",
+              "ToolTip": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\UserControls\\WorShopDetailUC.xaml.cs",
+              "RelativeToolTip": "UserControls\\WorShopDetailUC.xaml.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T12:26:20.887Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Command.cs",
+              "DocumentMoniker": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\OpCommand\\Command.cs",
+              "RelativeDocumentMoniker": "OpCommand\\Command.cs",
+              "ToolTip": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\OpCommand\\Command.cs",
+              "RelativeToolTip": "OpCommand\\Command.cs",
+              "ViewState": "AgIAABMAAAAAAAAAAAA2wCgAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-08-21T12:13:21.799Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "WorShopDetailUC.xaml",
+              "DocumentMoniker": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\UserControls\\WorShopDetailUC.xaml",
+              "RelativeDocumentMoniker": "UserControls\\WorShopDetailUC.xaml",
+              "ToolTip": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\UserControls\\WorShopDetailUC.xaml",
+              "RelativeToolTip": "UserControls\\WorShopDetailUC.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2025-08-21T12:10:01.564Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "WorkShopModel.cs",
               "DocumentMoniker": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\Models\\WorkShopModel.cs",
               "RelativeDocumentMoniker": "Models\\WorkShopModel.cs",
@@ -90,12 +140,11 @@
               "RelativeToolTip": "Models\\WorkShopModel.cs",
               "ViewState": "AgIAAA8AAAAAAAAAAAAzwB4AAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-20T12:23:22.305Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-20T12:23:22.305Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 11,
               "Title": "StuffOutWorkModel.cs",
               "DocumentMoniker": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\Models\\StuffOutWorkModel.cs",
               "RelativeDocumentMoniker": "Models\\StuffOutWorkModel.cs",
@@ -103,24 +152,24 @@
               "RelativeToolTip": "Models\\StuffOutWorkModel.cs",
               "ViewState": "AgIAABEAAAAAAAAAAAAowBgAAAAuAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-19T12:23:02.959Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-08-19T12:23:02.959Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 3,
               "Title": "MainWindow.xaml.cs",
               "DocumentMoniker": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\MainWindow.xaml.cs",
               "RelativeDocumentMoniker": "MainWindow.xaml.cs",
               "ToolTip": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\MainWindow.xaml.cs",
               "RelativeToolTip": "MainWindow.xaml.cs",
-              "ViewState": "AgIAAAwAAAAAAAAAAAAAABUAAAAiAAAAAAAAAA==",
+              "ViewState": "AgIAADgAAAAAAAAAAAAAwD0AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T13:13:40.272Z"
+              "WhenOpened": "2025-08-15T13:13:40.272Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 7,
               "Title": "AssemblyInfo.cs",
               "DocumentMoniker": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\AssemblyInfo.cs",
               "RelativeDocumentMoniker": "AssemblyInfo.cs",
@@ -128,11 +177,12 @@
               "RelativeToolTip": "AssemblyInfo.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-08-15T13:13:26.332Z"
+              "WhenOpened": "2025-08-15T13:13:26.332Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 12,
               "Title": "ReaderUC.xaml.cs",
               "DocumentMoniker": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\UserControls\\ReaderUC.xaml.cs",
               "RelativeDocumentMoniker": "UserControls\\ReaderUC.xaml.cs",
@@ -145,7 +195,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 14,
               "Title": "RaderModel.cs",
               "DocumentMoniker": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\Models\\RaderModel.cs",
               "RelativeDocumentMoniker": "Models\\RaderModel.cs",
@@ -157,7 +207,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 13,
               "Title": "ReaderUC.xaml",
               "DocumentMoniker": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\UserControls\\ReaderUC.xaml",
               "RelativeDocumentMoniker": "UserControls\\ReaderUC.xaml",
@@ -168,7 +218,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 16,
               "Title": "DeviceModel.cs",
               "DocumentMoniker": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\Models\\DeviceModel.cs",
               "RelativeDocumentMoniker": "Models\\DeviceModel.cs",
@@ -180,7 +230,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 17,
               "Title": "AlarmModel.cs",
               "DocumentMoniker": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\Models\\AlarmModel.cs",
               "RelativeDocumentMoniker": "Models\\AlarmModel.cs",
@@ -192,7 +242,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 15,
               "Title": "EnviromentModel.cs",
               "DocumentMoniker": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\Models\\EnviromentModel.cs",
               "RelativeDocumentMoniker": "Models\\EnviromentModel.cs",
@@ -204,7 +254,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 2,
               "Title": "BtnStyleDic.xaml",
               "DocumentMoniker": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\Dictionary\\BtnStyleDic.xaml",
               "RelativeDocumentMoniker": "Dictionary\\BtnStyleDic.xaml",
@@ -216,13 +266,13 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 8,
               "Title": "MainWindowVM.cs",
               "DocumentMoniker": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\ViewModels\\MainWindowVM.cs",
               "RelativeDocumentMoniker": "ViewModels\\MainWindowVM.cs",
               "ToolTip": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\ViewModels\\MainWindowVM.cs",
               "RelativeToolTip": "ViewModels\\MainWindowVM.cs",
-              "ViewState": "AgIAACYAAAAAAAAAAAA2wEQAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAB8AAAAAAAAAAAA2wEUAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-01T12:40:09.732Z",
               "EditorCaption": ""
@@ -235,14 +285,14 @@
               "RelativeDocumentMoniker": "UserControls\\MointorUC.xaml.cs",
               "ToolTip": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\UserControls\\MointorUC.xaml.cs",
               "RelativeToolTip": "UserControls\\MointorUC.xaml.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAswBUAAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAAwAAAAAAAAAAADwvxMAAAASAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-08-01T12:35:56.709Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "MointorUC.xaml",
               "DocumentMoniker": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\UserControls\\MointorUC.xaml",
               "RelativeDocumentMoniker": "UserControls\\MointorUC.xaml",
@@ -254,7 +304,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 18,
               "Title": "App.xaml",
               "DocumentMoniker": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\App.xaml",
               "RelativeDocumentMoniker": "App.xaml",
@@ -266,7 +316,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 19,
               "Title": "OPerateBtnStyleDic.xaml",
               "DocumentMoniker": "D:\\WPF250717\u5B66\u4E60\\ProductMonitorpractice\\ProductMonitor\\Dictionary\\OPerateBtnStyleDic.xaml",
               "RelativeDocumentMoniker": "Dictionary\\OPerateBtnStyleDic.xaml",
