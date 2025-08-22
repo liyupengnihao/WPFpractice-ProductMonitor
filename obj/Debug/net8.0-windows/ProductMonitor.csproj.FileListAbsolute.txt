@@ -32,3 +32,5 @@ D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-window
 D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\UserControls\ReaderUC.baml
 D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\UserControls\WorShopDetailUC.g.cs
 D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\UserControls\WorShopDetailUC.baml
+D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\UserControls\RingUC.g.cs
+D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\UserControls\RingUC.baml

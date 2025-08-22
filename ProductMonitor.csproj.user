@@ -8,6 +8,9 @@
     <Compile Update="UserControls\ReaderUC.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="UserControls\RingUC.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="UserControls\WorShopDetailUC.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
