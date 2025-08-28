@@ -5,6 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:ProductMonitor.UserControls"
              mc:Ignorable="d" 
+             xmlns:lvc="clr-namespace:LiveCharts.Wpf;assembly=LiveCharts.Wpf"
              d:DesignHeight="675" d:DesignWidth="1200" Height="675" Width="1200">
     <UserControl.Resources>
         <Style TargetType="RadioButton">
@@ -29,7 +30,7 @@
                     <Setter Property="Foreground" Value="white"></Setter>
                 </Trigger>
             </Style.Triggers>
-        </Style> 
+        </Style>
     </UserControl.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -49,5 +50,136 @@
             <RadioButton Content="故障" VerticalAlignment="Center" ></RadioButton>
             <RadioButton Content="停机" VerticalAlignment="Center" ></RadioButton>
         </StackPanel>
+        <!--第二行-->
+        <ScrollViewer Grid.Row="1" Margin="10,5" VerticalScrollBarVisibility="Hidden">
+            <ItemsControl ItemsSource="{Binding MachineList}">
+                <!--排列样式-->
+                <ItemsControl.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <UniformGrid Columns="5"></UniformGrid>
+                    </ItemsPanelTemplate>
+                </ItemsControl.ItemsPanel>
+
+                <!--数据样式-->
+                <ItemsControl.ItemTemplate>
+                    <DataTemplate>
+                        <Border BorderBrush="#9918aabd" Background="#0a18aabd"  BorderThickness="0,1,0,0" Height="260" Margin="10,5">
+                            <Grid TextBlock.FontSize="11">
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="30"></RowDefinition>
+                                    <RowDefinition ></RowDefinition>
+                                    <RowDefinition Height="22"></RowDefinition>
+                                    <RowDefinition Height="22"></RowDefinition>
+                                    <RowDefinition Height="22"></RowDefinition>
+                                </Grid.RowDefinitions>
+
+                                <!--第一行-->
+                                <TextBlock VerticalAlignment="Center" FontSize="12" Foreground="#aaffffff" Margin="20,0" Background="Transparent">
+                                    <Run Text="&#xe60d;" FontFamily="../Resource/Fonts/#iconfont"></Run>
+                                    <Run Text="{Binding MachineName}"></Run>
+                                </TextBlock>
+                                <StackPanel HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Center" Margin="20,0">
+                                    <Border Width="7" Height="7" CornerRadius="3" Background="LightGreen"></Border>
+                                    <TextBlock Text="{Binding Status}" Foreground="LightGreen" VerticalAlignment="Center" Margin="10,0" FontSize="10"></TextBlock>
+                                </StackPanel>
+
+                                <!--第二行-->
+                                <local:RingUC Grid.Row="1" PrecentValue="{Binding Percent}" Margin="30"></local:RingUC>
+
+                                <!--第三行-->
+                                <StackPanel Grid.Row="2" Orientation="Horizontal" VerticalAlignment="Center" Margin="15,0">
+                                    <TextBlock Text="任务状态：" Foreground="#55ffffff" VerticalAlignment="Center"></TextBlock>
+                                    <Label Content="{Binding Status}" BorderBrush="LightGreen" Foreground="LightGreen" BorderThickness="2" Padding="5,2"></Label>
+                                </StackPanel>
+
+                                <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">
+                                    <Hyperlink TextDecorations="None" Foreground="#55ffffff">[详情]</Hyperlink>
+                                </TextBlock>
+                                <!--第四行-->
+                                <StackPanel Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center" Margin="15,0">
+                                    <TextBlock Text="任务进度:" Foreground="#55ffffff"></TextBlock>
+                                    <TextBlock Foreground="white">
+                                        <Run Text="{Binding FinishedCount}"></Run>
+                                        <Run Text="/"></Run>
+                                        <Run Text="{Binding PlanCount}"></Run>
+                                    </TextBlock>
+                                </StackPanel>
+                                <!--第五行-->
+                                <StackPanel Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center" Margin="15,0">
+                                    <TextBlock Text="工单:" Foreground="#55ffffff"></TextBlock>
+                                    <TextBlock Foreground="white" Text="{Binding OrderNo}"></TextBlock>
+                                </StackPanel>
+
+                            </Grid>
+                        </Border>
+                    </DataTemplate>
+                </ItemsControl.ItemTemplate>
+            </ItemsControl>
+        </ScrollViewer>
+
+        <Border Name="detail" Grid.RowSpan="2" Background="#22000000" Visibility="Collapsed">
+            <!--Collapsed收缩，不占位置Hide会占位置-->
+            <Border Background="White" VerticalAlignment="Bottom" BorderBrush="#aa3bedf1" BorderThickness="1">
+                <!--为实现渐变效果-->
+                <Grid Height="350">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="40"></RowDefinition>
+                        <RowDefinition Height="30"></RowDefinition>
+                        <RowDefinition></RowDefinition>
+                    </Grid.RowDefinitions>
+
+                    <!--第一行-->
+                    <TextBlock Text="机台效率趋势图" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" Foreground="#555" Margin="15,0"></TextBlock>
+                    <Button Content="&#xe621;" Style="{StaticResource OperateBtnStyle}" FontSize="20" VerticalAlignment="Center" Width="40" Height="40" HorizontalAlignment="Right"></Button>
+                    
+                    <!--第二行-->
+                    <StackPanel Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal" VerticalAlignment="Center" Margin="40,0">
+                        <Border Height="7" Width="7" Margin="20,0,50,0" Background="LightGreen"></Border>
+                        <TextBlock Text="作业"></TextBlock>
+
+                        <Border Height="7" Width="7" Margin="20,0,50,0" Background="Orange"></Border>
+                        <TextBlock Text="等待"></TextBlock>
+
+                        <Border Height="7" Width="7" Margin="20,0,50,0" Background="PaleVioletRed"></Border>
+                        <TextBlock Text="故障"></TextBlock>
+
+                        <Border Height="7" Width="7" Margin="20,0,50,0" Background="LightGray"></Border>
+                        <TextBlock Text="停机"></TextBlock>
+                    </StackPanel>
+
+                    <StackPanel Grid.Row="1" HorizontalAlignment="Right" Orientation="Horizontal" VerticalAlignment="Center">
+                        <RadioButton Content="当日"></RadioButton>
+                        <RadioButton Content="当周"></RadioButton>
+                        <RadioButton Content="当月"></RadioButton>
+                        <RadioButton Content="当年"></RadioButton>
+                    </StackPanel>
+                    
+                    <!--第三行-->
+                    <lvc:CartesianChart Grid.Row="2" Margin="15,0">
+                        <lvc:CartesianChart.AxisX>
+                            <lvc:Axis Labels="20-11,20-12,21-01,21-02,21-03,21-04,21-05,21-06,21-07,21-08,21-09,21-10,21-11,21-12,22-01,22-02,22-03,22-04,22-05,22-06,22-07">
+                                <lvc:Axis.Separator>
+                                    <lvc:Separator Step="1" StrokeThickness="0">
+                                        
+                                    </lvc:Separator>
+                                </lvc:Axis.Separator>
+                            </lvc:Axis>
+                        </lvc:CartesianChart.AxisX>
+
+                        <lvc:CartesianChart.AxisY>
+                            <lvc:Axis MinValue="0" MaxValue="100">
+                                <lvc:Axis.Separator>
+                                    <lvc:Separator Stroke="#08000000">
+                                        
+                                    </lvc:Separator>
+                                </lvc:Axis.Separator>
+                            </lvc:Axis>
+                        </lvc:CartesianChart.AxisY>
+                        
+                    </lvc:CartesianChart>
+                </Grid>
+            </Border>
+            
+        </Border>
     </Grid>
 </UserControl>
