@@ -81,5 +81,33 @@ namespace ProductMonitor
                 return new Command(GoBack);
             }
         }
+        /// <summary>
+        /// 最小化
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnMin(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Minimized;
+        }
+        /// <summary>
+        /// 最大化
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnMax(object sender, RoutedEventArgs e)
+        {
+            this.WindowState = WindowState.Maximized;
+        }
+        /// <summary>
+        /// 关闭
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void BtnClose(object sender, RoutedEventArgs e)
+        {
+            //this.Close();//关闭界面
+            Environment.Exit(0);//关闭程序
+        }
     }
 }

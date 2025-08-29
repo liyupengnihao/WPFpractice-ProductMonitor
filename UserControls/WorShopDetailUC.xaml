@@ -93,7 +93,7 @@
                                 </StackPanel>
 
                                 <TextBlock Grid.Row="2" HorizontalAlignment="Right" VerticalAlignment="Center">
-                                    <Hyperlink TextDecorations="None" Foreground="#55ffffff">[详情]</Hyperlink>
+                                    <Hyperlink TextDecorations="None" Foreground="#55ffffff" Click="Hyperlink_Click">[详情]</Hyperlink>
                                 </TextBlock>
                                 <!--第四行-->
                                 <StackPanel Grid.Row="3" Orientation="Horizontal" VerticalAlignment="Center" Margin="15,0">
@@ -118,9 +118,9 @@
         </ScrollViewer>
 
         <Border Name="detail" Grid.RowSpan="2" Background="#22000000" Visibility="Collapsed">
-            <!--Collapsed收缩，不占位置Hide会占位置-->
-            <Border Background="White" VerticalAlignment="Bottom" BorderBrush="#aa3bedf1" BorderThickness="1">
-                <!--为实现渐变效果-->
+            <!--此border用于显示-->
+            <Border Name="detailContent" Background="White" VerticalAlignment="Bottom" BorderBrush="#aa3bedf1" BorderThickness="1">
+                <!--此border为实现渐变效果-->
                 <Grid Height="350">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40"></RowDefinition>
@@ -130,8 +130,8 @@
 
                     <!--第一行-->
                     <TextBlock Text="机台效率趋势图" HorizontalAlignment="Left" VerticalAlignment="Center" FontSize="16" Foreground="#555" Margin="15,0"></TextBlock>
-                    <Button Content="&#xe621;" Style="{StaticResource OperateBtnStyle}" FontSize="20" VerticalAlignment="Center" Width="40" Height="40" HorizontalAlignment="Right"></Button>
-                    
+                    <Button Content="&#xe621;" Style="{StaticResource OperateBtnStyle}" Click="Button_Click" FontSize="20" VerticalAlignment="Center" Width="40" Height="40" HorizontalAlignment="Right"></Button>
+
                     <!--第二行-->
                     <StackPanel Grid.Row="1" HorizontalAlignment="Left" Orientation="Horizontal" VerticalAlignment="Center" Margin="40,0">
                         <Border Height="7" Width="7" Margin="20,0,50,0" Background="LightGreen"></Border>
@@ -153,14 +153,14 @@
                         <RadioButton Content="当月"></RadioButton>
                         <RadioButton Content="当年"></RadioButton>
                     </StackPanel>
-                    
+
                     <!--第三行-->
                     <lvc:CartesianChart Grid.Row="2" Margin="15,0">
                         <lvc:CartesianChart.AxisX>
                             <lvc:Axis Labels="20-11,20-12,21-01,21-02,21-03,21-04,21-05,21-06,21-07,21-08,21-09,21-10,21-11,21-12,22-01,22-02,22-03,22-04,22-05,22-06,22-07">
                                 <lvc:Axis.Separator>
                                     <lvc:Separator Step="1" StrokeThickness="0">
-                                        
+
                                     </lvc:Separator>
                                 </lvc:Axis.Separator>
                             </lvc:Axis>
@@ -170,16 +170,34 @@
                             <lvc:Axis MinValue="0" MaxValue="100">
                                 <lvc:Axis.Separator>
                                     <lvc:Separator Stroke="#08000000">
-                                        
+
                                     </lvc:Separator>
                                 </lvc:Axis.Separator>
                             </lvc:Axis>
                         </lvc:CartesianChart.AxisY>
-                        
+                        <lvc:CartesianChart.Series>
+                            <lvc:StackedColumnSeries 
+                                Values="34,36,73,54,87,61,71,56,47,42,49,76,77,68,62,73,44,39,55,33"
+                                Fill="LightGreen" MaxColumnWidth="15" Title="作业" StrokeThickness="0">
+                            </lvc:StackedColumnSeries>
+
+                            <lvc:StackedColumnSeries 
+    Values="7,7,4,0,4,8,5,3,6,1,0,2,7,5,3,1,9,6,3,0"
+    Fill="Orange" MaxColumnWidth="15" Title="等待" StrokeThickness="0">
+                            </lvc:StackedColumnSeries>
+
+                            <lvc:StackedColumnSeries 
+    Values="19,2,9,10,9,6,9,6,9,2,4,9,6,14,11,9,6,8,12,11"
+    Fill="PaleVioletRed" MaxColumnWidth="15" Title="故障" StrokeThickness="0"></lvc:StackedColumnSeries>
+
+                            <lvc:StackedColumnSeries 
+    Values="5,2,1,2,2,5,1,2,3,4,2,3,5,2,1,3,2,1,2,1"
+    Fill="LightGray" MaxColumnWidth="15" Title="停机" StrokeThickness="0"></lvc:StackedColumnSeries>
+                        </lvc:CartesianChart.Series>
                     </lvc:CartesianChart>
                 </Grid>
             </Border>
-            
+
         </Border>
     </Grid>
 </UserControl>
