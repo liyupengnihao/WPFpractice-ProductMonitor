@@ -1,1 +1,1 @@
-此用于学习wpf,另外加入ModubsTCP和ModbusRTU通讯（待完成）
+此用于学习wpf,另外加入ModubsTCP和ModbusRTU通讯测试（待完成）
