@@ -109,7 +109,7 @@
             </StackPanel>
             <!--第一行第三列 配置按钮 触发器 渐进色-->
             <Button Style="{StaticResource BtnStyle}" Grid.Column="2" HorizontalAlignment="Right" Height="35" Width="80" VerticalAlignment="Center" Margin="5,0"
-                    Content="配置" Tag="&#xe61b;"></Button>
+                    Content="配置" Tag="&#xe61b;" Command="{Binding ShowSettingCmm,RelativeSource={RelativeSource AncestorType=Window}}"></Button>
         </Grid>
         <!--第二行-->
         <Grid Grid.Row="1">

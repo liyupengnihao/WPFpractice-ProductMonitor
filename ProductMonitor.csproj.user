@@ -14,5 +14,8 @@
     <Compile Update="UserControls\WorShopDetailUC.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="Views\SettinghWin.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
 </Project>
