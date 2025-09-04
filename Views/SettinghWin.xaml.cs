@@ -23,5 +23,20 @@ namespace ProductMonitor.Views
         {
             InitializeComponent();
         }
+        /// <summary>
+        /// 定位到配置页面相应位置
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void RadioButton_Click(object sender, RoutedEventArgs e)
+        {
+            //程序集（授权）  路径  #为片段
+            frame.Navigate(new Uri("pack://application:,,,/ProductMonitor;component/Views/SettingPage.xaml#"+(sender as RadioButton)?.Tag.ToString(), UriKind.RelativeOrAbsolute));
+
+            ////程序集（授权）  路径  同一程序集时不用授权
+            //frame.Navigate(new Uri("pack://application:,,,/Views/SettingPage.xaml", UriKind.RelativeOrAbsolute));
+
+
+        }
     }
 }

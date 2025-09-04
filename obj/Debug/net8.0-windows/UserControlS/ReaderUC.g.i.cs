@@ -109,7 +109,7 @@ namespace ProductMonitor.UserControls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ProductMonitor;component/usercontrols/readeruc.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ProductMonitor;V1.0.0.0;component/usercontrols/readeruc.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\UserControls\ReaderUC.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

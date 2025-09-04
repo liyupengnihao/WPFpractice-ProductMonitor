@@ -69,7 +69,7 @@ namespace ProductMonitor.UserControls {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ProductMonitor;component/usercontrols/ringuc.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ProductMonitor;V1.0.0.0;component/usercontrols/ringuc.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\UserControls\RingUC.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

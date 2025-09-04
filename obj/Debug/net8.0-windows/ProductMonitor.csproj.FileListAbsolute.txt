@@ -37,3 +37,5 @@ D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-window
 D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\GeneratedInternalTypeHelper.g.cs
 D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\Views\SettinghWin.g.cs
 D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\Views\SettinghWin.baml
+D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\Views\SettingPage.g.cs
+D:\WPF250717学习\ProductMonitorpractice\ProductMonitor\obj\Debug\net8.0-windows\Views\SettingPage.baml

@@ -48,11 +48,15 @@
         <Border BorderThickness="0,0,1,0" Grid.Row="1" Grid.Column="0">
         </Border>
         <StackPanel Grid.Row="1" Grid.Column="0" Margin="10,0">
-            <RadioButton Content="设备清单"></RadioButton>
-            <RadioButton Content="环境监测"></RadioButton>
-            <RadioButton Content="设备监测"></RadioButton>
-            <RadioButton Content="配置一"></RadioButton>
-            <RadioButton Content="配置二"></RadioButton>
+            <RadioButton Content="设备清单" Tag="data1" IsChecked="True" Click="RadioButton_Click"></RadioButton>
+            <RadioButton Content="环境监测" Tag="data2" Click="RadioButton_Click"></RadioButton>
+            <RadioButton Content="设备监测" Tag="data3" Click="RadioButton_Click"></RadioButton>
+            <RadioButton Content="配置一" Tag="data4" Click="RadioButton_Click"></RadioButton>
+            <RadioButton Content="配置二" Tag="data5" Click="RadioButton_Click"></RadioButton>
         </StackPanel>
+
+        <ScrollViewer Grid.Row="1" Grid.Column="1" VerticalScrollBarVisibility="Hidden">
+            <Frame Source="SettingPage.xaml" Name="frame" NavigationUIVisibility="Hidden"></Frame>
+        </ScrollViewer>
     </Grid>
 </Window>
